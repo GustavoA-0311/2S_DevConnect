@@ -1,45 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Galada&family=Lexend:wght@100..900&display=swap');
 
 :root{
-
     --cor-preto: #000000;
-    --cor-azul: #2686cc;
-    --cor-branco: #ffffff;
-    --cor-cinza-escuro1: #b6b6b6;
-    --cor-cinza-escuro2: #4D4D4D;
-    --cor-cinza-escuro3: #7D7D7D;
-    --cor-cinza-escuro4: #D1D1D1;
-    --cor-cinza-medio: #e5e5e5;
-    --cor-cinza-claro: #fafafa;
+    --cor-verde-escuro: #333c31;
+    --cor-cinza: #6e8169;
+    --cor-verde-claro1: #8abb7c;
+    --cor-verde-claro2: #8ce670;
+    --cor-branco: #FFFFFF;
 
-    --borda: 1px solid var(--cor-cinza-escuro4);
-    --borda-arredonda: 2px;
+    --borda: 1px solid var(--cor-preto);
+    --borda-arredondada: 2px;
 
-    --tamanho-fonte-1g: 20px;
+    --tamanho-fonte-lg: 20px;
     --tamanho-fonte-md: 16px;
     --tamanho-fonte-sm: 14px;
 
- 
 }
 
+    @font-face {
+        font-family: Lexend;
+        src: url(../fonts/Fascinate\,Lexend\,Galada/Lexend),
+            url(../fonts/Fascinate\,Lexend\,Galada/sans-serif);
+    }
 
-@font-face {
-    font-family: Quicksand;
-    src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf),
-         url(../fonts/Quicksand/static/Quicksand-Regular.ttf),
+    @font-face {
+        font-family: Fascinate;
+        src: url(../fonts/Fascinate\,Lexend\,Galada/Fascinate),
+            url(../fonts/Fascinate\,Lexend\,Galada/sans-serif);
+    }
+
+    @font-face {
+        font-family: Galada;
+        src: url(../fonts/Fascinate\,Lexend\,Galada/Galada),
+            url(../fonts/Galada/Galada-Regular.ttf);
+    }
 
 
 
-
-}
+     /*    Seletor Global      */
 
 
 *{
-  font-family: "Quicksand", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 
 
 
@@ -49,8 +61,133 @@ body{
 
 
 
+
 h1{
     position: absolute;
     z-index: -1;
     opacity: 0;
+}
+
+
+/*  Formulario */
+
+.estilo-formulario{
+    border: var(--borda);
+    width: 100%;
+    background-color: var(--cor-branco);
+    font-weight: 500;
+}
+
+
+
+
+input{
+    width: 100%;
+    height: 35px;
+    border: var(--borda);
+    background-color: var(--cor-branco);
+}
+
+
+.formulario-botao-verde{
+    background-color: #8ABB7C;
+    border-radius: var(--borda-arredondada);
+    font-weight: 500;
+    padding: 3px;
+    height: 35px;
+    color: var(--cor-branco);
+    font-size: var(--tamanho-fonte-sm);
+}
+
+input[type="file"]{
+    display: none;   
+}
+
+
+.custom-file-upload {
+    display: inline-block;
+    width: 100%;
+   /* margin-top: 40px;*/
+   max-width: 300px;
+    padding: 20px;
+    background-color:var(--cor-verde-claro1);
+    color: white;
+    border-radius: 5px;
+    font-weight: var(--cor-verde-claro1);
+    text-align: center;
+    justify-content: center;
+    border: 2px solid var(--cor-preto)
+  }
+
+
+/* Cabeçalho */
+
+#cabecalho{
+    width: 100%;
+    background-color:var(--cor-verde-claro1);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+  /*align-items: center; */
+
+}
+
+#cabecalho > nav{
+    width: 85%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--borda);
+}
+
+
+#logo-mobile{
+    display: none;
+}
+
+
+.cabecalho-acoes{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
+
+.cabecalho-acoes > a{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+#foto-perfil{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+
+
+    
+
+
+
+/* RESPONSIVO */
+
+@media only screen and (max-width: 485px) {
+    #logo-mobile{
+        display: block;
+    }
+
+    #logo-desktop{
+        display: none;
+    }
 }
